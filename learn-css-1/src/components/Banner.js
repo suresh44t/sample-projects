@@ -12,6 +12,7 @@ const Banner = () => {
         alt=""
         style={{
           width: '100%',
+          height: '90%'
         }}
       />
       <Box elevation={0} sx={{ padding: "10px", textAlign: "center" }}>

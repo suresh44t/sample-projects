@@ -20,7 +20,7 @@ const BiddingDetails = () => {
 
   return (
     <>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item md={6}>
           Price
           <Autocomplete
@@ -28,9 +28,11 @@ const BiddingDetails = () => {
             id="combo-box-demo1"
             options={data}
             sx={{
-              backgroundColor: "#ffffff"
+              backgroundColor: "#ffffff",
+              borderRadius: "20px",
+              marginTop: "10px"
             }}
-            renderInput={(params) => <TextField sx={{ color: "#ffffff" }} {...params} label="Movie" />}
+            renderInput={(params) => <TextField sx={{ color: "#ffffff", ".MuiAutocomplete-input" : { padding: "0 !important" }, "label" : { top: "-5px" } }} {...params} label="Movie" />}
           />
         </Grid>
         <Grid item md={6}>
@@ -40,15 +42,17 @@ const BiddingDetails = () => {
             id="combo-box-demo2"
             options={data}
             sx={{
-              backgroundColor: "#ffffff"
+              backgroundColor: "#ffffff",
+              borderRadius: "20px",
+              marginTop: "10px"
             }}
-            renderInput={(params) => <TextField sx={{ color: "#ffffff" }} {...params} label="Movie" />}
+            renderInput={(params) => <TextField sx={{ color: "#ffffff", ".MuiAutocomplete-input" : { padding: "0 !important" }, "label" : { top: "-5px" } }} {...params} label="Movie" />}
           />
         </Grid>
       </Grid>
       <Box component="div" sx={{ textAlign: "center", marginTop: "20px" }}>Service Fee 1.275%</Box>
       <Box component="h3" sx={{ textAlign: "center", marginBottom: "20px" }}>TOTAL 0.49875 ETH</Box>
-      <Stack direction="row" spacing={2} justifyContent="center">
+      <Stack direction="row" spacing={2} justifyContent="center" sx={{ marginTop: "40px" }}>
         <Button variant="contained" sx={{ color: "#ffffff", backgroundColor: "#888888" }}>
           Close
         </Button>

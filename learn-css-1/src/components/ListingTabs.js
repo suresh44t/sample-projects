@@ -2,7 +2,6 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 
 import ListingTable from "../components/ListingTable";
 
@@ -34,11 +33,12 @@ const ListingTabs = () => {
   };
 
   return (
-    <>
+    <Box sx={{ border: "1px solid white", borderRadius: "30px", margin: "20px auto" }}>
       <Tabs
         value={value}
         onChange={handleChange}
         aria-label="secondary tabs example"
+        sx={{ borderBottom: "1px solid white" }}
       >
         <Tab sx={{
           color: "#ffffff"
@@ -50,7 +50,7 @@ const ListingTabs = () => {
           color: "#ffffff"
         }} label="Item Three" />
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} sx={{ padding: 0 }}>
         <ListingTable />
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -59,7 +59,7 @@ const ListingTabs = () => {
       <TabPanel value={value} index={2}>
         <ListingTable />
       </TabPanel>
-    </>)
+    </Box>)
 }
 
 export default ListingTabs;
